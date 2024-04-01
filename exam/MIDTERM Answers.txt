@@ -1,0 +1,69 @@
+Q.1] 
+Integer y=10, String s="sggs"
+a)	jshell>Integer.rotateLeft(y,3)
+	$==> 80
+	The binary representation of y=10 is 1010. When it is shifted to left by 3, 000 is added to right of the binary number which makes it 80 in decimal.
+b)	jshell> s==(String)"sggs"
+	$3 ==> true
+	The location of the data "sggs" is compared in == operator so the memory location is found same.
+c)	jshell>y+(y=17)
+	$4==>  27
+	The value of y=10 and y=17 is 27.
+d)	jshell>Integer(25)
+	|  Error:
+	|  cannot find symbol
+	|    symbol:   method Integer(int)
+	|  y=Integer(25)
+	|    ^-----^
+	This is the wrong method to type cast. It should be written as (Integer)25.
+e)	(short)9042024
+	$6==>-1944
+	The solution is:
+		9042024%65536=63592
+		63592-32768=30824
+		-32768+30824=-1944
+		
+Q.2]
+a) The error: Could not find or load main class Sample is displayed when there is no class named as Sample found in the file.
+
+b) The error midterm.java:3: error: unclosed string literal means there is a missing double quote bracket in declaring a String.
+	String s="MidTerm;
+
+c) The error array required but String found is displayed when an arrayy is required but String value is passed in the function.
+
+
+Q.3]
+To run a Java code like a C code, there is a provision in JDK version 21 to use the same. We need to type the command as follows to compile a file while executing: 
+	javac --release21 --enable-preview MidTerm.java
+	
+Q.4]
+a.)
+	Error: Recursive constructor invocation
+	The error is found as the constructor is called infinite times using 'this()' function.
+	
+b.) Examination: Mid
+	The String "Semester" is not displayed as the String exam is not saved as exam.concat("Semester").
+c.)	The code will compile with no errors.
+	The output will be: 
+		Exception in thread "main" java.lang.StackOverflowError
+			at Question4.<init>(Question4.java:3)
+			at Question4.<init>(Question4.java:3)
+			at Question4.<init>(Question4.java:3) , for many times.
+d.)	OUTPUT:
+	Static Block 1: EXAM
+	Static Block 2: EXAM
+	Static Block 1: MIDTERM
+	Static Block 2: MidTerm
+	Welcome to Mid Term Examination
+	Init Block: EXAM
+	EXAM Constructor
+	Init Block: EXAM
+	EXAM Constructor
+	Init Block: MIDTERM
+	MIDTERM Constructor
+	MidTerm
+	
+	The static blocks of both the classes will be displayed first. Then the line "Welcome to Mid Term Examination" will be executed in the main block. When the Exam object is called the init and constructor gets executed. When MidTerm object is called then the parent class constructor and init are displayed and then the child class' init and constructor. Then at the last the toString() function gets executed when the object is printed.
+	
+Q.5]
+ There will be 3 objects created at runtime i.e. str2, str4, and str5. The variables str2 and str4 share the same location. Other two are String literals. 

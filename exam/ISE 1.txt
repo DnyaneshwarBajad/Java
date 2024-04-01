@@ -1,0 +1,17 @@
+Q.1] 
+a) Variable might not have been initialized is displayed when the variable is not declared in the class.
+
+b) The alternate way to check whether the student belongs to IT Dept is to use the substring() method.
+   We can declare String s="2024bit025"
+      if(s.substring(4,7).equals("bit"))
+      	return true;
+      	
+Q.2]
+a. The static keyword means that a particular variable is a type itself and is not instance variable that can be changed later.
+
+b. OUTPUT:
+   null
+   -24
+   
+   The String variable is displayed as null as it is not provided any value. 
+   The Integer 2024 is converted to byte and then declared to short data type.
